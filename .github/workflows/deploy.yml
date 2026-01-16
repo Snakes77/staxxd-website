@@ -1,0 +1,49 @@
+name: Build and Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build static site
+        run: npm run build
+      
+      - name: Verify build output
+        run: |
+          if [ ! -f "out/index.html" ]; then
+            echo "ERROR: index.html missing from build output"
+            exit 1
+          fi
+          if [ ! -d "out/_next" ]; then
+            echo "ERROR: _next directory missing from build output"
+            exit 1
+          fi
+          echo "✅ Build output verified"
+      
+      - name: Deploy to deploy branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          destination_dir: .
+          branch: deploy
+          force_orphan: true
+          keep_files: false
