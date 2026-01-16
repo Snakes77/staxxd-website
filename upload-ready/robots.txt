@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://staxxd.co.uk/sitemap.xml

@@ -1,0 +1,62 @@
+Create a world-class, professional hero section video for Staxxd business consultancy.
+
+VIDEO SPECIFICATIONS:
+- 1920x1080 resolution, 15-20 seconds duration
+- Seamless loop (end frame matches start frame)
+- 30fps, MP4/MOV format, optimized for web
+- Modern, professional, tech-forward aesthetic
+
+BRAND COLORS (use these exact hex codes):
+- Primary Dark: #252a34
+- Accent Pink: #ff2e63 (CRITICAL - use for X's in logo)
+- Light Gray: #eaeaea
+- Secondary Gray: #3a4252
+- Dark Background: #101216
+- Light Pink: #ff6189
+
+LOGO REQUIREMENTS:
+- Display "Staxxd" prominently and boldly
+- The TWO X's in "Staxxd" must be in pink (#ff2e63)
+- Rest of letters (S-t-a-d-d) in white or dark (#252a34)
+- Modern, bold sans-serif font
+- Professional animation (fade-in, slide-in, or elegant reveal)
+
+CONTENT TO SHOWCASE (visualize these solutions):
+1. Website Development - Modern websites, code snippets, responsive design
+2. Web Applications - Custom dashboards, interfaces, apps
+3. Google Apps Scripts - Google Workspace automation, workflows
+4. Business Solutions - Problem-solving concepts, systems, processes
+5. AI-Powered Solutions - AI visualizations, neural networks, smart tech
+6. Process Automation - Workflow diagrams, efficiency, automation flows
+
+VISUAL STYLE:
+- Clean, premium aesthetic (think Apple/Stripe product videos)
+- Dark backgrounds (#101216 or #252a34)
+- Pink accents (#ff2e63) for highlights and the X's
+- Abstract tech elements: subtle circuits, data flows, networks
+- Smooth, fluid animations (ease-in/ease-out)
+- Professional transitions between concepts
+- Modern UI elements, geometric shapes, grids
+- No cliché stock footage - original, creative visuals
+
+SCENE STRUCTURE (15-20 seconds):
+- 0-3s: "Staxxd" logo appears with pink X's, tagline "Staxxd NOT Stacked!" 
+- 3-12s: Showcase solutions with smooth transitions - websites, apps, automation, AI, business processes - all using brand colors
+- 12-20s: Return to logo prominence, "Business Consultancy With a Twist" text, seamless loop back
+
+KEY MESSAGES TO CONVEY:
+- Solutions company, problem solver
+- Fast turnaround, bespoke solutions
+- For busy business people
+- Tech-forward, innovative, efficient
+
+QUALITY REQUIREMENTS:
+- Professional, world-class quality
+- No pixelation or compression artifacts
+- Smooth motion blur where appropriate
+- Seamless loop (critical - must connect perfectly)
+- All brand colors exact match to hex codes
+- Logo with pink X's clearly visible throughout
+- Premium, modern, tech-forward feel
+
+Generate an original, professional hero video that positions Staxxd as a premium business consultancy and tech solutions company. The video must be visually stunning, perfectly branded, and showcase innovation and efficiency. Make it absolutely world-class.
