@@ -53,53 +53,65 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         <div
             onClick={() => handleMove(position)}
             className={cn(
-                "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out",
+                "absolute left-1/2 top-1/2 cursor-pointer border-2 p-6 sm:p-8 transition-all duration-500 ease-in-out",
                 isCenter
-                    ? "z-10 bg-[#FF2E63] text-white border-[#FF2E63]"
-                    : "z-0 bg-white/10 text-gray-200 border-white/20 hover:border-[#FF2E63]/50 backdrop-blur-md"
+                    ? "z-10 bg-[#FF2E63] text-white border-[#FF2E63] shadow-2xl"
+                    : "z-0 bg-white/5 text-gray-200 border-white/10 hover:border-[#FF2E63]/30 backdrop-blur-xl"
             )}
             style={{
                 width: cardSize,
-                height: cardSize,
-                clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
+                height: cardSize + 40, // Extra height for text buffer
+                clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0 100%, 0 0)`,
                 transform: `
           translate(-50%, -50%) 
-          translateX(${(cardSize / 1.5) * position}px)
-          translateY(${isCenter ? -65 : position % 2 ? 15 : -15}px)
-          rotate(${isCenter ? 0 : position % 2 ? 2.5 : -2.5}deg)
+          translateX(${(cardSize / 1.4) * position}px)
+          translateY(${isCenter ? -70 : position % 2 ? 10 : -10}px)
+          scale(${isCenter ? 1 : 0.85})
+          rotate(${isCenter ? 0 : position % 2 ? 2 : -2}deg)
         `,
-                boxShadow: isCenter ? "0px 8px 0px 4px rgba(255, 255, 255, 0.1)" : "0px 0px 0px 0px transparent"
+                boxShadow: isCenter ? "0 25px 50px -12px rgba(255, 46, 99, 0.5)" : "none"
             }}
         >
-            <span
-                className="absolute block origin-top-right rotate-45 bg-white/20"
-                style={{
-                    right: -2,
-                    top: 48,
-                    width: SQRT_5000,
-                    height: 2
-                }}
-            />
-            <img
-                src={testimonial.imgSrc}
-                alt={testimonial.author}
-                className="mb-4 h-14 w-12 object-cover object-top"
-                style={{
-                    boxShadow: isCenter ? "3px 3px 0px rgba(0,0,0,0.3)" : "3px 3px 0px rgba(255,255,255,0.1)"
-                }}
-            />
-            <h3 className={cn(
-                "text-base sm:text-xl font-medium",
-                isCenter ? "text-white" : "text-gray-100"
-            )}>
-                "{testimonial.quote}"
-            </h3>
-            <p className={cn(
-                "absolute bottom-8 left-8 right-8 mt-2 text-sm italic",
-                isCenter ? "text-white/80" : "text-gray-400"
-            )}>
-                - {testimonial.author}, {testimonial.company}
-            </p>
+            <div className="flex flex-col h-full">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-white/20">
+                        <img
+                            src={testimonial.imgSrc}
+                            alt={testimonial.author}
+                            className="h-full w-full object-cover"
+                        />
+                    </div>
+                    <div className="overflow-hidden">
+                        <p className={cn(
+                            "font-bold text-sm sm:text-base truncate",
+                            isCenter ? "text-white" : "text-gray-100"
+                        )}>
+                            {testimonial.author}
+                        </p>
+                        <p className={cn(
+                            "text-xs sm:text-sm truncate opacity-80",
+                            isCenter ? "text-white/80" : "text-gray-400"
+                        )}>
+                            {testimonial.company}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="flex-1 flex flex-col justify-center overflow-hidden">
+                    <h3 className={cn(
+                        "text-base sm:text-lg lg:text-xl font-medium leading-relaxed italic line-clamp-6 sm:line-clamp-none",
+                        isCenter ? "text-white" : "text-gray-100/90"
+                    )}>
+                        "{testimonial.quote}"
+                    </h3>
+                </div>
+
+                <div className="mt-auto pt-4 flex justify-end">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="opacity-20 translate-x-1">
+                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 13.4477 10.017 14V18C10.017 19.1046 9.12158 20 8.017 20H5.017C4.46472 20 4.017 19.5523 4.017 19V5C4.017 3.89543 4.91243 3 6.017 3H19.017C20.1216 3 21.017 3.89543 21.017 5V15C21.017 17.2091 19.2261 19 17.017 19H14.017V21H14.017Z" />
+                    </svg>
+                </div>
+            </div>
         </div>
     );
 };
@@ -139,7 +151,7 @@ export const StaggerTestimonials: React.FC<StaggerTestimonialsProps> = ({ items 
     useEffect(() => {
         const updateSize = () => {
             const { matches } = window.matchMedia("(min-width: 640px)");
-            setCardSize(matches ? 365 : 290);
+            setCardSize(matches ? 420 : 340);
         };
 
         updateSize();
