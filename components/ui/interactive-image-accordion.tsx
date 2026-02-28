@@ -40,19 +40,19 @@ const AccordionItem = ({ item, isActive, onMouseEnter }: AccordionItemProps) => 
             {/* Caption Text */}
             <div
                 className={`
-          absolute transition-all duration-500 ease-in-out
+          absolute transition-all duration-500 ease-in-out pointer-events-none
           ${isActive
-                        ? 'inset-x-0 bottom-8 px-4 text-center rotate-0 opacity-100'
-                        : 'inset-0 flex items-center justify-center -rotate-90 opacity-90 translate-y-0'
+                        ? 'inset-x-0 bottom-8 px-4 flex justify-center rotate-0 opacity-100'
+                        : 'inset-0 flex items-center justify-center -rotate-90 opacity-90'
                     }
         `}
             >
                 <span className={`
                     whitespace-nowrap inline-block px-4 py-2 rounded-full font-bold text-white
-                    backdrop-blur-md border border-white/20
+                    backdrop-blur-md border border-white/20 text-center
                     ${isActive
-                        ? 'text-xl bg-black/40 shadow-xl'
-                        : 'text-sm bg-black/60 shadow-lg'
+                        ? 'text-lg sm:text-xl bg-black/40 shadow-xl max-w-[90%] !whitespace-normal leading-tight'
+                        : 'text-xs sm:text-sm bg-black/60 shadow-lg max-w-[400px] truncate'
                     }
                 `}>
                     {item.title}
