@@ -57,13 +57,13 @@ export default function Home() {
       {/* Services Section */}
       <section className="services">
         <div className="container">
-          <div className="services-header">
+          <div className="services-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto var(--spacing-xl)' }}>
             <span className="badge">OUR SERVICES</span>
-            <h2 className="section-title">
-              <span>Solutions That</span>
+            <h2 className="section-title section-title-dark">
+              <span>Solutions That{' '}</span>
               <span className="text-accent">Drive Results</span>
             </h2>
-            <p className="services-subtitle">We deliver custom solutions tailored to your unique business needs. From web development to AI-powered automation, we solve the problems that matter.</p>
+            <p className="services-subtitle" style={{ fontSize: 'var(--font-size-lg)', color: 'var(--text-secondary)' }}>We deliver custom solutions tailored to your unique business needs. From web development to AI-powered automation, we solve the problems that matter.</p>
           </div>
 
           <div className="services-cta-section" style={{ marginTop: 0, marginBottom: 'var(--spacing-2xl)' }}>
