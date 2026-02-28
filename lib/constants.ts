@@ -99,4 +99,9 @@ export const TESTIMONIALS = [
     author: "Business Owner",
     company: "Events & Entertainment",
   },
+  {
+    quote: "Standardising our AML and KYC workflows with Staxxd's automation was a turning point. We now have seamless, real-time due diligence—from Companies House checks to Risk Assessments—integrated directly into our process. It reduced our manual compliance workload by over 80%.",
+    author: "MD",
+    company: "Legal & Compliance",
+  },
 ]
