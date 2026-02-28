@@ -13,7 +13,17 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+
+  // Handle scroll for transparent -> glassmorphic transition
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -32,7 +42,7 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev)
 
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav container" aria-label="Global navigation">
 
         {/* Logo */}
@@ -68,9 +78,11 @@ export default function Header() {
                 top: '100%',
                 left: 0,
                 right: 0,
-                background: 'rgba(255,255,255,0.98)',
-                padding: '1rem',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                background: 'rgba(10, 10, 15, 0.98)',
+                padding: '1.5rem',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                backdropFilter: 'blur(10px)',
+                borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
                 zIndex: 999,
               }
               : {}
