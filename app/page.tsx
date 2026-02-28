@@ -192,7 +192,7 @@ export default function Home() {
           <div className="why-choose-us-content-centered">
             <span className="badge badge-white">WHY STAXXD</span>
             <h2 className="section-title section-title-white">
-              <span>Trusted by UK</span>
+              <span>Trusted by UK{' '}</span>
               <span className="text-accent">Businesses</span>
             </h2>
             <p className="why-choose-us-intro">Trusted by UK businesses because we combine extensive practical knowledge with analytical thinking. From startups to enterprise, we adapt our approach to your unique situation.</p>
