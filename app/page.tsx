@@ -8,6 +8,8 @@ import { StaggerTestimonials } from '@/components/ui/stagger-testimonials'
 const HeroFuturistic = dynamic(() => import('@/components/ui/hero-futuristic'), { ssr: false });
 import ProblemSolution from '@/components/sections/ProblemSolution';
 import AnimatedCard from '@/components/ui/animated-card'
+import Testimonials from '@/components/sections/Testimonials';
+import CTA from '@/components/sections/CTA';
 
 export default function Home() {
 
@@ -155,7 +157,7 @@ export default function Home() {
         <div className="container">
           <div className="how-it-works-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto var(--spacing-xl)' }}>
             <span className="badge">OUR PROCESS</span>
-            <h2 className="section-title">
+            <h2 className="section-title section-title-dark">
               <span>How We</span>
               <span className="text-accent">Work</span>
             </h2>
@@ -226,34 +228,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section - USING SHADCN STAGGER TESTIMONIALS */}
-      <section className="testimonials">
-        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-          <div className="section-header">
-            <span className="badge">CLIENT FEEDBACK</span>
-            <h2 className="section-title">
-              <span>What Our Clients</span>
-              <span className="text-accent">Say About Us</span>
-            </h2>
-            <p className="section-description">Real feedback from businesses we've helped behind the scenes.</p>
-          </div>
-          <div className="mt-8" style={{ marginTop: '2rem' }}>
-            <StaggerTestimonials />
-          </div>
-        </div>
-      </section>
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* CTA Section */}
-      <section className="cta">
-        <div className="container">
-          <h2 className="cta-title">Ready to Work With <span className="text-accent">Staxxd</span>?</h2>
-          <p className="cta-description">Ready to transform your business operations? Let's discuss how our experience and analytical approach can solve your specific challenges.</p>
-          <div className="cta-actions">
-            <Link href="/contact" className="btn btn-primary btn-large">Get Started Now</Link>
-            <Link href="/services" className="btn btn-secondary btn-large">Explore Services</Link>
-          </div>
-        </div>
-      </section>
+      <CTA />
     </>
-  )
+  );
 }
