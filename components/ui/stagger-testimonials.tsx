@@ -22,132 +22,21 @@ const unsplashFaces = [
 
 const getImg = (idx: number) => unsplashFaces[idx % unsplashFaces.length];
 
-const testimonials = [
-    {
-        tempId: 0,
-        testimonial: "Staxxd completely transformed our operations. We work 5x faster now.",
-        by: "Alex, CEO at TechCorp",
-        imgSrc: getImg(0)
-    },
-    {
-        tempId: 1,
-        testimonial: "I'm confident our processes are finally scalable with Staxxd. Incredible work.",
-        by: "Dan, CTO at SecureNet",
-        imgSrc: getImg(1)
-    },
-    {
-        tempId: 2,
-        testimonial: "We were drowning in admin before we found Staxxd. Can't thank you guys enough!",
-        by: "Stephanie, COO at InnovateCo",
-        imgSrc: getImg(2)
-    },
-    {
-        tempId: 3,
-        testimonial: "Staxxd's custom automations make planning for the future seamless. Highly recommended!",
-        by: "Marie, CFO at FuturePlanning",
-        imgSrc: getImg(3)
-    },
-    {
-        tempId: 4,
-        testimonial: "If I could give 11 stars, I'd give 12. Unbelievably fast turnaround.",
-        by: "Andre, Head of Operations at CreativeSolutions",
-        imgSrc: getImg(4)
-    },
-    {
-        tempId: 5,
-        testimonial: "SO HAPPY WE FOUND YOU GUYS!!!! I'd bet Staxxd has saved me 100 hours so far.",
-        by: "Jeremy, Product Manager at TimeWise",
-        imgSrc: getImg(5)
-    },
-    {
-        tempId: 6,
-        testimonial: "Took some convincing, but now that we use Staxxd's custom scripts, we're never going back.",
-        by: "Pam, Marketing Director at BrandBuilders",
-        imgSrc: getImg(6)
-    },
-    {
-        tempId: 7,
-        testimonial: "I would be lost without Staxxd's deep business analysis. The ROI is EASILY 10X for us.",
-        by: "Daniel, Data Scientist at AnalyticsPro",
-        imgSrc: getImg(7)
-    },
-    {
-        tempId: 8,
-        testimonial: "They didn't just give us software, they solved our actual business problems.",
-        by: "Fernando, Director at UserFirst",
-        imgSrc: getImg(8)
-    },
-    {
-        tempId: 9,
-        testimonial: "I hired them 2 years ago to fix one workflow, and they stayed to fix everything.",
-        by: "Andy, Head of IT at CloudMasters",
-        imgSrc: getImg(9)
-    },
-    {
-        tempId: 10,
-        testimonial: "I've been searching for an analytical partner like Staxxd for YEARS.",
-        by: "Pete, Sales Director at RevenueRockets",
-        imgSrc: getImg(0)
-    },
-    {
-        tempId: 11,
-        testimonial: "It's so simple and intuitive, we got the whole company up to speed in days.",
-        by: "Marina, HR Manager at TalentForge",
-        imgSrc: getImg(1)
-    },
-    {
-        tempId: 12,
-        testimonial: "Staxxd's problem-solving approach is unparalleled. They get it.",
-        by: "Olivia, Customer Success Manager at ClientCare",
-        imgSrc: getImg(2)
-    },
-    {
-        tempId: 13,
-        testimonial: "The efficiency gains we've seen since bringing in Staxxd are off the charts!",
-        by: "Raj, Operations Manager at StreamlineSolutions",
-        imgSrc: getImg(3)
-    },
-    {
-        tempId: 14,
-        testimonial: "Staxxd has revolutionized how we handle our data. It's a game-changer.",
-        by: "Lila, Workflow Specialist at ProcessPro",
-        imgSrc: getImg(4)
-    },
-    {
-        tempId: 15,
-        testimonial: "They actually listen and adapt to what we need, not what they want to sell.",
-        by: "Trevor, Partner at GrowthGurus",
-        imgSrc: getImg(5)
-    },
-    {
-        tempId: 16,
-        testimonial: "I appreciate how Staxxd continually finds new ways to save us time and money.",
-        by: "Naomi, Innovation Lead at FutureTech",
-        imgSrc: getImg(6)
-    },
-    {
-        tempId: 17,
-        testimonial: "The ROI we've seen with Staxxd in just 3 months is incredible.",
-        by: "Victor, Finance Director at ProfitPeak",
-        imgSrc: getImg(7)
-    },
-    {
-        tempId: 18,
-        testimonial: "Very analytical, highly professional, and they deliver exactly what they promise.",
-        by: "Yuki, Managing Director at BalancedTech",
-        imgSrc: getImg(8)
-    },
-    {
-        tempId: 19,
-        testimonial: "We've tried many consultants, but Staxxd stands out for actually getting things done.",
-        by: "Zoe, General Manager at ReliableSystems",
-        imgSrc: getImg(9)
-    }
-];
+interface Testimonial {
+    quote: string;
+    author: string;
+    company: string;
+}
 
 interface TestimonialCardProps {
     position: number;
-    testimonial: typeof testimonials[0];
+    testimonial: {
+        quote: string;
+        author: string;
+        company: string;
+        imgSrc: string;
+        tempId: number;
+    };
     handleMove: (steps: number) => void;
     cardSize: number;
 }
@@ -193,7 +82,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             />
             <img
                 src={testimonial.imgSrc}
-                alt={`${testimonial.by.split(',')[0]}`}
+                alt={testimonial.author}
                 className="mb-4 h-14 w-12 object-cover object-top"
                 style={{
                     boxShadow: isCenter ? "3px 3px 0px rgba(0,0,0,0.3)" : "3px 3px 0px rgba(255,255,255,0.1)"
@@ -203,21 +92,31 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
                 "text-base sm:text-xl font-medium",
                 isCenter ? "text-white" : "text-gray-100"
             )}>
-                "{testimonial.testimonial}"
+                "{testimonial.quote}"
             </h3>
             <p className={cn(
                 "absolute bottom-8 left-8 right-8 mt-2 text-sm italic",
                 isCenter ? "text-white/80" : "text-gray-400"
             )}>
-                - {testimonial.by}
+                - {testimonial.author}, {testimonial.company}
             </p>
         </div>
     );
 };
 
-export const StaggerTestimonials: React.FC = () => {
+interface StaggerTestimonialsProps {
+    items: Testimonial[];
+}
+
+export const StaggerTestimonials: React.FC<StaggerTestimonialsProps> = ({ items }) => {
     const [cardSize, setCardSize] = useState(365);
-    const [testimonialsList, setTestimonialsList] = useState(testimonials);
+    const enrichedItems = items.map((item, idx) => ({
+        ...item,
+        imgSrc: getImg(idx),
+        tempId: idx
+    }));
+    const [testimonialsList, setTestimonialsList] = useState(enrichedItems);
+
 
     const handleMove = (steps: number) => {
         const newList = [...testimonialsList];

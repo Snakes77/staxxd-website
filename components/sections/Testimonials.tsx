@@ -36,7 +36,7 @@ export default function Testimonials() {
         </div>
 
         <div className="mx-auto mt-8 sm:mt-12 w-full max-w-[100vw]">
-          <StaggerTestimonials />
+          <StaggerTestimonials items={TESTIMONIALS} />
         </div>
       </div>
     </div>

@@ -80,18 +80,23 @@ export const NAVIGATION = [
 
 export const TESTIMONIALS = [
   {
-    quote: 'Staxxd solved problems we didn\'t even know we had. Fast turnaround, bespoke solutions, and they really get underneath the skin of your business.',
-    author: 'Business Owner',
-    company: 'Professional Services',
+    quote: "Staxxd built a custom estimator that transformed how we handle quotes. What used to take 20 minutes now takes 2, with 100% accuracy every time. It’s been a game-changer for our operational efficiency.",
+    author: "MD",
+    company: "Manufacturing Sector",
   },
   {
-    quote: 'The Google Apps Scripts they built saved us hours every week. We\'re not tech people, but Staxxd made it simple and effective.',
-    author: 'Operations Director',
-    company: 'SME Business',
+    quote: "The technical expertise brought to our digital presence was outstanding. They understood the complexities of our industry and delivered a platform that perfectly balances professional credibility with high-end performance.",
+    author: "Director",
+    company: "Financial Services",
   },
   {
-    quote: 'Fast solutions for busy people. That\'s exactly what we needed, and that\'s exactly what Staxxd delivered. Problem solvers, not just consultants.',
-    author: 'CEO',
-    company: 'Growing Business',
+    quote: "Working with Staxxd allowed us to position our consultancy at the very top of the market. They didn't just build a website; they understood our mission and built a digital toolset that supports our growth.",
+    author: "MD",
+    company: "Healthcare Consultancy",
+  },
+  {
+    quote: "The AI automation integrated into our platform is incredible. We’ve gone from hours of manual research to generating high-quality content in seconds, allowing us to scale further than we thought possible.",
+    author: "Business Owner",
+    company: "Events & Entertainment",
   },
 ]
