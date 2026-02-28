@@ -12,28 +12,28 @@ export default function ProblemSolution() {
       title: 'Never enough hours in the day',
       description: 'You\'re drowning in admin, repetitive tasks, and fire-fighting. The important work gets pushed aside while you handle the urgent. Every day feels like a race against time.',
       solution: 'We automate the repetitive tasks and handle the admin that\'s eating your time. Custom workflows, process automation, and intelligent systems free you up to focus on what actually grows your business. Fast turnaround means you see results quickly.',
-      imageUrl: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2068&auto=format&fit=crop',
+      imageUrl: '/images/chameleon-1.jpg',
     },
     {
       id: 2,
       title: 'Tech that doesn\'t work for you',
       description: 'Your systems don\'t talk to each other. You\'re manually moving data between platforms, duplicating work, and wasting hours on tasks that should be automated. Off-the-shelf software doesn\'t fit your unique needs.',
       solution: 'We build bespoke solutions that integrate your systems and eliminate manual work. Custom web applications, Google Apps Scripts, and AI-powered tools that work the way your business works. No more juggling multiple platforms or duplicating effort.',
-      imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop',
+      imageUrl: '/images/chameleon-2.jpg',
     },
     {
       id: 3,
       title: 'The little things pile up',
       description: 'Small tasks that "only take a minute" add up to hours. Data entry, report generation, email workflows, file management - all eating into time you should spend on growing your business.',
       solution: 'We handle the little things so you don\'t have to. Automated workflows, smart integrations, and custom scripts that eliminate those "quick tasks" that add up. We get underneath the skin of your business and solve the problems you don\'t have time for.',
-      imageUrl: 'https://images.unsplash.com/photo-1586281380349-632bec12613d?q=80&w=2070&auto=format&fit=crop',
+      imageUrl: '/images/chameleon-3.jpg',
     },
     {
       id: 4,
       title: 'No time to think strategically',
       description: 'You\'re so busy doing that you can\'t step back and see the bigger picture. Opportunities get missed, inefficiencies go unnoticed, and growth stalls because you\'re stuck in the weeds.',
       solution: 'We give you that time back. By automating processes and solving operational challenges, you can finally step back and think strategically. We handle the systems and processes, you focus on growth and opportunity. That\'s how we help you make money.',
-      imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop',
+      imageUrl: '/images/chameleon-4.jpg',
     },
   ]
 

@@ -43,9 +43,9 @@ const AccordionItem = ({ item, isActive, onMouseEnter }: AccordionItemProps) => 
           absolute text-white font-bold whitespace-nowrap
           transition-all duration-300 ease-in-out
           ${isActive
-                        ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0 text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]' // Active state: horizontal, bottom-center
+                        ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0 text-xl drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]' // Active state: horizontal, bottom-center
                         // Inactive state: vertical, positioned at the bottom, for all screen sizes
-                        : 'w-auto text-left bottom-24 left-1/2 -translate-x-1/2 rotate-90 text-gray-300 text-lg hover:text-white'
+                        : 'w-auto text-left bottom-24 left-1/2 -translate-x-1/2 rotate-90 text-white/90 text-lg hover:text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)]'
                     }
         `}
             >
