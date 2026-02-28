@@ -37,10 +37,6 @@ export const Contact2 = ({
                             </h3>
                             <ul className="ml-4 list-disc">
                                 <li className="mb-2">
-                                    <span className="font-bold">Phone: </span>
-                                    {phone}
-                                </li>
-                                <li className="mb-2">
                                     <span className="font-bold">Email: </span>
                                     <a href={`mailto:${email}`} className="text-brand-accent hover:text-brand-accent-light transition-colors">
                                         {email}

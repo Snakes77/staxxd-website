@@ -11,7 +11,6 @@ export default function ContactPage() {
     <ContactWithVortex
       title="Get In Touch"
       description={`Join over 50 UK businesses who have transformed their operations with Staxxd. ${COMPANY_INFO.description}`}
-      phone={COMPANY_INFO.phone || "Not provided"}
       email={COMPANY_INFO.email}
       web={{ label: COMPANY_INFO.website, url: `https://${COMPANY_INFO.website}` }}
     />

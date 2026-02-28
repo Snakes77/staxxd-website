@@ -8,7 +8,6 @@ export const COMPANY_INFO = {
   social: {
     instagram: '@staxxd',
     facebook: '/staxxd',
-    linkedin: '/company/staxxd',
   },
   stats: {
     yearsExperience: 20,

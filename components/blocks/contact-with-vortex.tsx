@@ -6,12 +6,11 @@ import { Contact2 } from '@/components/ui/contact-2';
 interface ContactWithVortexProps {
     title: string;
     description: string;
-    phone: string;
     email: string;
     web: { label: string; url: string };
 }
 
-export function ContactWithVortex({ title, description, phone, email, web }: ContactWithVortexProps) {
+export function ContactWithVortex({ title, description, email, web }: ContactWithVortexProps) {
     return (
         // Apply the brand's primary color as the background
         <div style={{ background: 'var(--primary-color)', minHeight: '100vh', position: 'relative' }}>
@@ -32,7 +31,6 @@ export function ContactWithVortex({ title, description, phone, email, web }: Con
                     <Contact2
                         title={title}
                         description={description}
-                        phone={phone}
                         email={email}
                         web={web}
                     />

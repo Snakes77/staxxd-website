@@ -38,9 +38,6 @@ export default function Footer() {
               <Link href="/cookies" className="footer-link">Cookie Policy</Link>
             </div>
           </div>
-          <div className="footer-social">
-            <a href="https://linkedin.com/company/staxxd" className="footer-social-link" aria-label="LinkedIn">LinkedIn</a>
-          </div>
         </div>
       </div>
     </footer>
