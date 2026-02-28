@@ -56,7 +56,7 @@ export const Contact2 = ({
                         </div>
                     </div>
                     <div className="mx-auto flex max-w-screen-md flex-col gap-6 rounded-lg border border-white/20 bg-white/5 p-10 shadow-lg backdrop-blur-sm">
-                        <form action="https://formspree.io/f/mqkenryp" method="POST" className="flex flex-col gap-6">
+                        <form action="https://formspree.io/f/xojjqarb" method="POST" className="flex flex-col gap-6">
                             <div className="flex flex-col gap-4 sm:flex-row">
                                 <div className="grid w-full items-center gap-1.5">
                                     <Label htmlFor="firstname" className="text-white">First Name</Label>
