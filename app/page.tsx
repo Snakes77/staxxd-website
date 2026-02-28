@@ -67,7 +67,7 @@ export default function Home() {
           </div>
 
           <div className="services-cta-section" style={{ marginTop: 0, marginBottom: 'var(--spacing-2xl)' }}>
-            <div className="services-cta-card" style={{ background: 'var(--bg-secondary)', padding: 'var(--spacing-xl)', borderRadius: 'var(--radius-xl)', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <div className="services-cta-card" style={{ background: 'var(--bg-secondary)', padding: 'var(--spacing-xl)', borderRadius: 'var(--radius-xl)', border: '1px solid rgba(255,255,255,0.1)', maxWidth: '1000px', margin: '0 auto' }}>
               <span className="badge badge-white">YOUR FLEXIBLE FRIEND</span>
               <h3 className="services-cta-title" style={{ fontSize: 'var(--font-size-3xl)', color: 'white', marginBottom: 'var(--spacing-md)' }}>
                 <span>We Adapt to</span> <span className="text-accent">Your Needs</span>
