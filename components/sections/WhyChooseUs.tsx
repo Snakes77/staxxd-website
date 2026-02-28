@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 animate-fade-in-delay drop-shadow-[0_3px_10px_rgba(0,0,0,0.7)]">
                 <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-                  Trusted by UK
+                  Trusted by UK{' '}
                 </span>{' '}
                 <span className="bg-gradient-to-r from-brand-accent to-brand-accent-light bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(255,46,99,0.5)]">
                   Businesses
@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
               {/* We Adapt Card - Full Width */}
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 sm:p-6 border-2 border-white/20">
                 <h3 className="text-xl lg:text-2xl font-extrabold text-white mb-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
-                  We Adapt to <span className="bg-gradient-to-r from-brand-accent to-brand-accent-light bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(255,46,99,0.5)]">Your Needs</span>
+                  We Adapt to{' '}<span className="bg-gradient-to-r from-brand-accent to-brand-accent-light bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(255,46,99,0.5)]">Your Needs</span>
                 </h3>
                 <p className="text-sm sm:text-base text-gray-100 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                   Just like a chameleon adapts to its environment, we adapt our solutions to suit your business needs across multiple sectors. Whether you're in retail, manufacturing, professional services, or technology - we change our approach to fit your unique challenges.

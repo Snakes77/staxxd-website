@@ -26,6 +26,7 @@ export default function HeroFuturistic() {
                     objectPosition: 'center',
                 }}
             >
+                <source src="/videos/staxxd-hero-dino.mp4" type="video/mp4" />
                 <source src="/videos/staxxd-hero-dino.mov" type="video/quicktime" />
                 <source src="/videos/staxxd-hero-dino.mov" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -71,7 +72,7 @@ export default function HeroFuturistic() {
                     20+ Years Experience • Entry-Level to C-Suite • Data-Driven Solutions
                 </div>
                 <h1 className="hero-title">
-                    <span className="hero-title-line">Transform Your</span>
+                    <span className="hero-title-line">Transform Your{' '}</span>
                     <span className="hero-title-accent">Business Today</span>
                 </h1>
                 <p className="hero-description">
