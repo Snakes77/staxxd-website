@@ -16,23 +16,19 @@ export default function HeroFuturistic() {
                 background: '#060611',
             }}
         >
-            {/* Video background */}
             <video
                 autoPlay
                 muted
                 loop
                 playsInline
+                className="absolute inset-0 w-full h-full object-cover"
                 style={{
-                    position: 'absolute',
-                    inset: 0,
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
                     objectPosition: 'center',
                 }}
             >
-                <source src="/videos/staxxd-hero-dino.mov" type="video/mp4" />
                 <source src="/videos/staxxd-hero-dino.mov" type="video/quicktime" />
+                <source src="/videos/staxxd-hero-dino.mov" type="video/mp4" />
+                Your browser does not support the video tag.
             </video>
 
             {/* Dark overlay — 65% so text is clearly readable */}

@@ -6,37 +6,11 @@ import dynamic from 'next/dynamic';
 import { StaggerTestimonials } from '@/components/ui/stagger-testimonials'
 
 const HeroFuturistic = dynamic(() => import('@/components/ui/hero-futuristic'), { ssr: false });
+import ProblemSolution from '@/components/sections/ProblemSolution';
 import AnimatedCard from '@/components/ui/animated-card'
 
 export default function Home() {
-  const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(null)
 
-  const toggleAccordion = (index: number) => {
-    setOpenAccordionIndex(openAccordionIndex === index ? null : index)
-  }
-
-  const accordions = [
-    {
-      title: "Never enough hours in the day",
-      content: "You're drowning in admin, repetitive tasks, and fire-fighting. The important work gets pushed aside while you handle the urgent. Every day feels like a race against time.",
-      solution: "We automate the repetitive tasks and handle the admin that's eating your time. Custom workflows, process automation, and intelligent systems free you up to focus on what actually grows your business. Fast turnaround means you see results quickly."
-    },
-    {
-      title: "Tech that doesn't work for you",
-      content: "Your systems don't talk to each other. You're manually moving data between platforms, duplicating work, and wasting hours on tasks that should be automated. Off-the-shelf software doesn't fit your unique needs.",
-      solution: "We build bespoke solutions that integrate your systems and eliminate manual work. Custom web applications, Google Apps Scripts, and AI-powered tools that work the way your business works. No more juggling multiple platforms or duplicating effort."
-    },
-    {
-      title: "The little things pile up",
-      content: "Small tasks that \"only take a minute\" add up to hours. Data entry, report generation, email workflows, file management - all eating into time you should spend on growing your business.",
-      solution: "We handle the little things so you don't have to. Automated workflows, smart integrations, and custom scripts that eliminate those \"quick tasks\" that add up. We get underneath the skin of your business and solve the problems you don't have time for."
-    },
-    {
-      title: "No time to think strategically",
-      content: "You're so busy doing that you can't step back and see the bigger picture. Opportunities get missed, inefficiencies go unnoticed, and growth stalls because you're stuck in the weeds.",
-      solution: "We give you that time back. By automating processes and solving operational challenges, you can finally step back and think strategically. We handle the systems and processes, you focus on growth and opportunity. That's how we help you make money."
-    }
-  ]
 
   return (
     <>
@@ -76,50 +50,7 @@ export default function Home() {
       </section>
 
       {/* Problem Solution Section */}
-      <section className="problem-solution">
-        <div className="container">
-          <div className="problem-solution-grid">
-            <div className="problem-solution-content">
-              <span className="badge">THE CHALLENGE</span>
-              <h2 className="section-title">
-                <span>You Don't Have to</span>
-                <span className="text-accent">Do It Alone</span>
-              </h2>
-              <p>Running a business in today's world means juggling endless tasks, tight deadlines, and constant pressure. You're pulled in every direction - managing operations, dealing with tech issues, handling admin, and trying to grow. There's never enough time, and the little things keep piling up. Sound familiar?</p>
-              <p>At Staxxd, we see the world of business differently, through different lenses. Where you see problems, we find solutions. We understand what busy business owners face because we've been there - from entry-level to C-suite. We listen, analyse deeply, and deliver actionable solutions that actually work.</p>
-            </div>
-            <div className="accordion">
-              {accordions.map((item, index) => {
-                const isExpanded = openAccordionIndex === index
-                return (
-                  <div className="accordion-item" key={index}>
-                    <button className="accordion-header" aria-expanded={isExpanded} onClick={() => toggleAccordion(index)}>
-                      <span className="accordion-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </span>
-                      <span className="accordion-title">{item.title}</span>
-                      <span className="accordion-arrow">▼</span>
-                    </button>
-                    <div className="accordion-content" style={{ maxHeight: isExpanded ? '500px' : '0' }}>
-                      <p>{item.content}</p>
-                      <div className="accordion-solution">
-                        <strong>How We Solve This:</strong>
-                        <p>{item.solution}</p>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-
-          <div style={{ marginTop: 'var(--spacing-xl)', textAlign: 'center' }}>
-            <Link href="/contact" className="btn btn-primary btn-large">Let's Solve Your Problems</Link>
-          </div>
-        </div>
-      </section>
+      <ProblemSolution />
 
       {/* Services Section */}
       <section className="services">
