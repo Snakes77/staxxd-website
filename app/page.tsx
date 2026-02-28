@@ -158,7 +158,7 @@ export default function Home() {
           <div className="how-it-works-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto var(--spacing-xl)' }}>
             <span className="badge">OUR PROCESS</span>
             <h2 className="section-title section-title-dark">
-              <span>How We</span>
+              <span>How We{' '}</span>
               <span className="text-accent">Work</span>
             </h2>
             <p className="section-subtitle" style={{ fontSize: 'var(--font-size-lg)', color: 'var(--text-secondary)' }}>A simple, transparent process designed to get to the root of your problems and deliver solutions fast.</p>
