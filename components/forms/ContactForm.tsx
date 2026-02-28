@@ -7,7 +7,6 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    email: '',
     company: '',
     service: '',
     message: '',
@@ -95,19 +94,21 @@ export default function ContactForm() {
         </div>
       </div>
 
-
-      <div className="w-full">
-        <input
-          type="text"
-          name="company"
-          id="company"
-          value={formData.company}
-          onChange={handleChange}
-          className="block w-full rounded-md border-0 px-3 py-1.5 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary"
-        />
+      <div>
+        <label htmlFor="company" className="block text-xs font-medium leading-5 text-gray-900">
+          Company
+        </label>
+        <div className="mt-1">
+          <input
+            type="text"
+            name="company"
+            id="company"
+            value={formData.company}
+            onChange={handleChange}
+            className="block w-full rounded-md border-0 px-3 py-1.5 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary"
+          />
+        </div>
       </div>
-    </div>
-      </div >
 
       <div>
         <label htmlFor="service" className="block text-xs font-medium leading-5 text-gray-900">
@@ -160,29 +161,25 @@ export default function ContactForm() {
       </div>
 
       <div className="text-xs text-gray-500 mt-3">
-        By submitting this form, you agree to our <Link href="/privacy" className="text-brand-accent hover:underline">Privacy Policy</Link>. 
+        By submitting this form, you agree to our <Link href="/privacy" className="text-brand-accent hover:underline">Privacy Policy</Link>.
         We'll only use your information to respond to your enquiry in accordance with GDPR.
       </div>
 
-  {
-    status === 'success' && (
-      <div className="rounded-md bg-green-50 p-3">
-        <p className="text-xs text-green-800">
-          Thank you! We'll get back to you within 24 hours.
-        </p>
-      </div>
-    )
-  }
+      {status === 'success' && (
+        <div className="rounded-md bg-green-50 p-3">
+          <p className="text-xs text-green-800">
+            Thank you! We'll get back to you within 24 hours.
+          </p>
+        </div>
+      )}
 
-  {
-    status === 'error' && (
-      <div className="rounded-md bg-red-50 p-3">
-        <p className="text-xs text-red-800">
-          Something went wrong. Please try again or email us directly.
-        </p>
-      </div>
-    )
-  }
-    </form >
+      {status === 'error' && (
+        <div className="rounded-md bg-red-50 p-3">
+          <p className="text-xs text-red-800">
+            Something went wrong. Please try again or email us directly.
+          </p>
+        </div>
+      )}
+    </form>
   )
 }
