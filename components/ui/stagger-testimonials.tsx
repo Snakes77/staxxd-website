@@ -97,9 +97,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
                     </div>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-center overflow-hidden">
+                <div className="flex-1 flex flex-col justify-start overflow-hidden pt-2">
                     <h3 className={cn(
-                        "text-base sm:text-lg lg:text-xl font-medium leading-relaxed italic line-clamp-6 sm:line-clamp-none",
+                        "text-base sm:text-lg lg:text-xl font-medium leading-normal italic line-clamp-8 sm:line-clamp-none",
                         isCenter ? "text-white" : "text-gray-100/90"
                     )}>
                         "{testimonial.quote}"
