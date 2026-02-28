@@ -103,7 +103,8 @@ export default function RootLayout({
                 addressCountry: 'GB',
               },
               sameAs: [
-                `https://linkedin.com${COMPANY_INFO.social.linkedin}`,
+                `https://instagram.com/${COMPANY_INFO.social.instagram.replace('@', '')}`,
+                `https://facebook.com${COMPANY_INFO.social.facebook}`,
               ],
             }),
           }}
