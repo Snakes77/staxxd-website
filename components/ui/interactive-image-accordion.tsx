@@ -38,19 +38,26 @@ const AccordionItem = ({ item, isActive, onMouseEnter }: AccordionItemProps) => 
             <div className={`absolute -inset-0.5 bg-gradient-to-r from-brand-accent to-brand-accent-light opacity-0 transition-opacity duration-500 blur-md pointer-events-none ${isActive ? 'opacity-20' : ''}`} />
 
             {/* Caption Text */}
-            <span
+            <div
                 className={`
-          absolute text-white font-bold whitespace-nowrap
-          transition-all duration-300 ease-in-out
+          absolute whitespace-nowrap transition-all duration-500 ease-in-out
           ${isActive
-                        ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0 text-xl drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]' // Active state: horizontal, bottom-center
-                        // Inactive state: vertical, positioned at the bottom, for all screen sizes
-                        : 'w-auto text-left bottom-24 left-1/2 -translate-x-1/2 rotate-90 text-white/90 text-lg hover:text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)]'
+                        ? 'bottom-8 left-0 right-0 px-4 text-center rotate-0 opacity-100'
+                        : 'bottom-12 left-1/2 -translate-x-1/2 rotate-90 opacity-90'
                     }
         `}
             >
-                {item.title}
-            </span>
+                <span className={`
+                    inline-block px-4 py-2 rounded-full font-bold text-white
+                    backdrop-blur-md border border-white/20
+                    ${isActive
+                        ? 'text-xl bg-black/40 shadow-xl'
+                        : 'text-sm bg-black/60 shadow-lg'
+                    }
+                `}>
+                    {item.title}
+                </span>
+            </div>
         </div>
     );
 };
