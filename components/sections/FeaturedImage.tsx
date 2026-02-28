@@ -24,7 +24,7 @@ export default function FeaturedImage() {
   }, [])
 
   return (
-    <div ref={ref} className="relative bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-primary py-12 sm:py-16 lg:py-20 overflow-hidden">
+    <div ref={ref} className="relative bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-primary pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-brand-accent/20 rounded-full blur-[200px] animate-pulse" />
@@ -52,8 +52,8 @@ export default function FeaturedImage() {
               </span>
             </h2>
             <p className="text-base sm:text-lg leading-7 text-gray-100 mb-6 font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
-              We're solutions specialists, not marketers. When time is limited and problems are complex, 
-              we step in to handle the technical challenges. Through intelligent systems and streamlined 
+              We're solutions specialists, not marketers. When time is limited and problems are complex,
+              we step in to handle the technical challenges. Through intelligent systems and streamlined
               processes, we transform how your business operates.
             </p>
             <div className="space-y-4">

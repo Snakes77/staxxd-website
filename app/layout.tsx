@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
+import '../style.css' // Import live HTML stylesheet
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import CookieConsent from '@/components/layout/CookieConsent'
 import { COMPANY_INFO } from '@/lib/constants'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  weight: ['300', '400', '600', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: `${COMPANY_INFO.name} - ${COMPANY_INFO.tagline} | Business Consultancy & Tech Solutions`,
@@ -52,7 +57,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://formspree.io" />
-        
+
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -104,10 +109,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
-        <a 
-          href="#main-content" 
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-accent focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg"
+      <body className={poppins.className}>
+        <a
+          href="#main-content"
+          className="skip-link"
           style={{ position: 'absolute', left: '-9999px' }}
         >
           Skip to main content

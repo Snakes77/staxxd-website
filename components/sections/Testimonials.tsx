@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { TESTIMONIALS } from '@/lib/constants'
+import { StaggerTestimonials } from '@/components/ui/stagger-testimonials'
 
 export default function Testimonials() {
   return (
@@ -34,61 +35,11 @@ export default function Testimonials() {
             Real feedback from businesses we've helped behind the scenes.
           </p>
         </div>
-        
-        <div className="mx-auto mt-8 sm:mt-12 max-w-7xl">
-          <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3 lg:gap-6">
-            {TESTIMONIALS.map((testimonial, index) => (
-              <TestimonialCard key={index} testimonial={testimonial} index={index} />
-            ))}
-          </div>
+
+        <div className="mx-auto mt-8 sm:mt-12 w-full max-w-[100vw]">
+          <StaggerTestimonials />
         </div>
       </div>
-    </div>
-  )
-}
-
-function TestimonialCard({ testimonial, index }: { testimonial: typeof TESTIMONIALS[0]; index: number }) {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
-  return (
-    <div
-      ref={ref}
-      className={`group relative bg-white/10 backdrop-blur-md rounded-xl p-5 sm:p-6 border-2 border-white/20 hover:border-brand-accent/50 hover:bg-white/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-accent/30 ${
-        isVisible ? 'animate-fade-in' : 'opacity-0'
-      }`}
-      style={{ animationDelay: `${index * 0.15}s` }}
-    >
-      <div className="absolute top-3 left-3 text-4xl text-brand-accent/20 font-serif">"</div>
-      <blockquote className="relative text-base leading-7 text-white mb-4 font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
-        <p>"{testimonial.quote}"</p>
-      </blockquote>
-      <figcaption className="relative flex items-center gap-4 pt-6 border-t border-white/20">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent-light flex items-center justify-center text-white font-bold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-          {testimonial.author.charAt(0)}
-        </div>
-        <div>
-          <div className="font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">{testimonial.author}</div>
-          <div className="text-gray-100 text-sm drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">{testimonial.company}</div>
-        </div>
-      </figcaption>
     </div>
   )
 }
