@@ -104,4 +104,9 @@ export const TESTIMONIALS = [
     author: "MD",
     company: "Legal & Compliance",
   },
+  {
+    quote: "Staxxd helped us bridge the gap between complex sustainability requirements and practical business growth. Their consultancy provided the expert roadmap we needed to scale our operations while staying true to our environmental values.",
+    author: "MD",
+    company: "Sustainability Consultancy",
+  },
 ]
