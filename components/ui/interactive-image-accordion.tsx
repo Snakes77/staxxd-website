@@ -40,15 +40,15 @@ const AccordionItem = ({ item, isActive, onMouseEnter }: AccordionItemProps) => 
             {/* Caption Text */}
             <div
                 className={`
-          absolute whitespace-nowrap transition-all duration-500 ease-in-out
+          absolute transition-all duration-500 ease-in-out
           ${isActive
-                        ? 'bottom-8 left-0 right-0 px-4 text-center rotate-0 opacity-100'
-                        : 'bottom-12 left-1/2 -translate-x-1/2 rotate-90 opacity-90'
+                        ? 'inset-x-0 bottom-8 px-4 text-center rotate-0 opacity-100'
+                        : 'inset-0 flex items-center justify-center -rotate-90 opacity-90 translate-y-0'
                     }
         `}
             >
                 <span className={`
-                    inline-block px-4 py-2 rounded-full font-bold text-white
+                    whitespace-nowrap inline-block px-4 py-2 rounded-full font-bold text-white
                     backdrop-blur-md border border-white/20
                     ${isActive
                         ? 'text-xl bg-black/40 shadow-xl'
