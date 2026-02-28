@@ -60,7 +60,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             )}
             style={{
                 width: cardSize,
-                height: cardSize + 40, // Extra height for text buffer
+                height: cardSize + 100, // Increased height buffer for longer testimonials
                 clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0 100%, 0 0)`,
                 transform: `
           translate(-50%, -50%) 
@@ -73,8 +73,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             }}
         >
             <div className="flex flex-col h-full">
-                <div className="flex items-center gap-4 mb-4">
-                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-white/20">
+                <div className="flex items-center gap-4 mb-3 shrink-0">
+                    <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-full border-2 border-white/20">
                         <img
                             src={testimonial.imgSrc}
                             alt={testimonial.author}
@@ -97,17 +97,23 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
                     </div>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-start overflow-hidden pt-2">
+                <div className="flex-1 flex flex-col justify-start overflow-hidden pt-1">
                     <h3 className={cn(
-                        "text-base sm:text-lg lg:text-xl font-medium leading-normal italic line-clamp-8 sm:line-clamp-none",
+                        "text-base sm:text-lg lg:text-xl font-medium leading-snug italic line-clamp-[12] sm:line-clamp-none",
                         isCenter ? "text-white" : "text-gray-100/90"
                     )}>
                         "{testimonial.quote}"
                     </h3>
                 </div>
 
-                <div className="mt-auto pt-4 flex justify-end">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="opacity-20 translate-x-1">
+                <div className="mt-auto pt-2 flex justify-end shrink-0">
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="opacity-20 translate-x-1 w-5 h-5 sm:w-6 sm:h-6"
+                    >
                         <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 13.4477 10.017 14V18C10.017 19.1046 9.12158 20 8.017 20H5.017C4.46472 20 4.017 19.5523 4.017 19V5C4.017 3.89543 4.91243 3 6.017 3H19.017C20.1216 3 21.017 3.89543 21.017 5V15C21.017 17.2091 19.2261 19 17.017 19H14.017V21H14.017Z" />
                     </svg>
                 </div>
