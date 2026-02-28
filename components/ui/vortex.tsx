@@ -155,8 +155,17 @@ export const Vortex = (props: VortexProps) => {
         const draw = () => {
             tick++;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = backgroundColor;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Only draw background if it's not transparent
+            if (backgroundColor !== "transparent") {
+                ctx.fillStyle = backgroundColor;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            // Before drawing particles, save the state to ensure glow only affects particles 
+            // and composite operation lighter doesn't stack on top of the background repeatedly.
+            // Actually, the easiest fix for the canvas blowout is simply drawing the background *on the container* 
+            // and keeping the canvas transparent. Let's ensure the canvas is transparent here if specified.
 
             for (let i = 0; i < particlePropsLength; i += particlePropCount) {
                 updateParticle(i);

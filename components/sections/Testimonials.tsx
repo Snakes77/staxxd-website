@@ -25,8 +25,7 @@ export default function Testimonials() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 animate-fade-in-delay drop-shadow-[0_3px_10px_rgba(0,0,0,0.7)]">
             <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
               What Our Clients
-            </span>
-            <br />
+            </span>{' '}
             <span className="bg-gradient-to-r from-brand-accent to-brand-accent-light bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(255,46,99,0.5)]">
               Say About Us
             </span>

@@ -14,7 +14,7 @@ export default function Services() {
         <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[150px] animate-pulse" />
         <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1.5s' }} />
       </div>
-      
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left side - Service tiles */}
@@ -37,8 +37,7 @@ export default function Services() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 mb-4 animate-fade-in-delay">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 We Adapt to
-              </span>
-              <br />
+              </span>{' '}
               <span className="bg-gradient-to-r from-brand-accent via-[#e01e4f] to-brand-accent bg-clip-text text-transparent">
                 Your Needs
               </span>
@@ -80,17 +79,16 @@ function ServiceCard({ service, index }: { service: typeof SERVICES[0]; index: n
   return (
     <div
       ref={ref}
-      className={`group relative bg-white rounded-lg p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 hover:border-brand-accent/40 overflow-hidden ${
-        isVisible ? 'animate-fade-in' : 'opacity-0'
-      }`}
+      className={`group relative bg-white rounded-lg p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 hover:border-brand-accent/40 overflow-hidden ${isVisible ? 'animate-fade-in' : 'opacity-0'
+        }`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {/* Animated gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/5 via-transparent to-brand-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
+
       {/* Glowing effect */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-accent to-brand-accent-light rounded-lg opacity-0 group-hover:opacity-15 blur-md transition-opacity duration-300" />
-      
+
       <div className="relative flex flex-col">
         <div className="flex items-center gap-3 mb-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-brand-accent to-brand-accent-light group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-sm group-hover:shadow-brand-accent/40 flex-shrink-0">

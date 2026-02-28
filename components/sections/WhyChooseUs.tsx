@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
         {/* Dark overlay for better text contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
       </div>
-      
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left side - Chameleon */}
@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
               </div>
             </div>
           </div>
-          
+
           {/* Right side - All Content Stacked */}
           <div className="order-1 lg:order-2">
             {/* Badge and Heading */}
@@ -64,8 +64,7 @@ export default function WhyChooseUs() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 animate-fade-in-delay drop-shadow-[0_3px_10px_rgba(0,0,0,0.7)]">
                 <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
                   Trusted by UK
-                </span>
-                <br />
+                </span>{' '}
                 <span className="bg-gradient-to-r from-brand-accent to-brand-accent-light bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(255,46,99,0.5)]">
                   Businesses
                 </span>
@@ -125,17 +124,16 @@ function FeatureCard({ feature, index }: { feature: { name: string; description:
   return (
     <div
       ref={ref}
-      className={`group relative flex flex-col bg-white/10 backdrop-blur-md rounded-xl p-5 border-2 border-white/20 hover:border-brand-accent/50 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden ${
-        isVisible ? 'animate-fade-in' : 'opacity-0'
-      }`}
+      className={`group relative flex flex-col bg-white/10 backdrop-blur-md rounded-xl p-5 border-2 border-white/20 hover:border-brand-accent/50 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden ${isVisible ? 'animate-fade-in' : 'opacity-0'
+        }`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {/* Animated gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/20 via-transparent to-brand-accent/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
+
       {/* Glowing effect */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-accent to-brand-accent-light rounded-xl opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />
-      
+
       <dt className="relative text-lg font-extrabold leading-6 text-white mb-2 group-hover:text-brand-accent transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
         {feature.name}
       </dt>

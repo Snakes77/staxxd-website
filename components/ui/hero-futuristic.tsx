@@ -82,7 +82,7 @@ export default function HeroFuturistic() {
                     Over <strong>20 years of hands-on experience</strong> from entry-level to C-suite. We listen, understand your problems, and deliver{' '}
                     <strong>data-driven solutions</strong> that work. Fast-paced. Results-focused.
                 </p>
-                <div className="hero-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <div className="hero-actions" style={{ display: 'flex', flexDirection: 'row', gap: '1rem', justifyContent: 'center' }}>
                     <Link href="/contact" className="btn btn-primary btn-large">
                         Get Started Now
                     </Link>
